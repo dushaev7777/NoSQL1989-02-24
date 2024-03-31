@@ -51,8 +51,11 @@
     </dependencies>
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_2.png)
+
 Настроим подключение к базе данных MongoDB в IntelliJ IDEA
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_3.png)
+
 Запустим Java запрос на генерацию 10млн строк и вставку в БД построчно.
 ```
 import com.mongodb.MongoClient;
@@ -85,7 +88,9 @@ public class Main {
 }
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_4.png)
+
 Проверим данные в подключенной БД MongoDB:
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_s1.png)
 
 Запрос на генерацию 10млн записей и вставки в виде массива данных:
@@ -125,11 +130,17 @@ public class Main {
 }
 ```
 Столкнулся с ошибкой java.lang.OutOfMemoryError: Java heap space:
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_5.png)
+
 Увеличил количество памяти на сервере приложения в настройка запуска запроса до 8ГБ:
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_6.png)
+
 Запустил повторно запрос:
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_7.png)
+
 Отправим запрос на выборку данных с условием что в документах будет встречаться число 999:
 ```
 import com.mongodb.client.MongoClient;
@@ -162,6 +173,7 @@ public class Main {
 }
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_8.png)
+
 Произведем удаление записей где встречается в поле "name" число 999:
 ```
 import com.mongodb.client.MongoClient;
@@ -188,6 +200,7 @@ public class Main {
 }
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_9.png)
+
 Обновление документов с числом 777 на 999:
 ```
 import com.mongodb.client.MongoClient;
@@ -224,7 +237,9 @@ public class Main {
 
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_10.png)
+
 Посмотрим измененные данные в БД:
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_s2.png)
 
 
@@ -250,10 +265,11 @@ public class Main {
         </dependency>
     </dependencies>
 ```
----Redis_pom
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_pom.png)
 
 Подключаем базу данных Redis в IntelliJ IDEA:
----Redis_BD
+
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_DB.png)
 
 Отправляем созданный Java запрос на генерацию 10млн строк и вставку в БД построчно.
 ```
@@ -274,8 +290,12 @@ public class Main {
     }
 }
 ```
----image_R1
----image_R2
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_1.png)
+
+Проверим данные в БД Redis
+
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_2.png)
+
 Отправим запрос конвеерной вставки 10млн записей:
 ```
 import redis.clients.jedis.Jedis;
@@ -298,7 +318,8 @@ public class Main {
     }
 }
 ```
----image_R3
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_3.png)
+
 Произведем поиск значений value в которых встречается число 999:
 ```
 import redis.clients.jedis.Jedis;
@@ -330,7 +351,8 @@ public class Main {
     }
 }
 ```
----image_4
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_4.png)
+
 Поменяем найденные значения с 999 на 777:
 ```
 import redis.clients.jedis.Jedis;
@@ -363,11 +385,9 @@ public class Main {
     }
 }
 ```
----image_5
-
----image_6 нет значений 999
-
----image_7 значения 777
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_5.png)
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_6.png)
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_7.png)
 
 Теперь удалим все строки где встречается значение 777:
 ```
@@ -400,10 +420,12 @@ public class Main {
     }
 }
 ```
----image_8
----image_9
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_8.png)
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_9.png)
+
 Построим временной график отправленных запросов в обе СУБД:
----Result
+
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Result.png)
 
 # 6. Выводы #
 
