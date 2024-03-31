@@ -32,11 +32,11 @@
 
 Скорость выполнения Java запросов будем измерять с помощью Profiler IntelliJ IDEA, чтобы получить временные значения приближенные к работе приложения.
 
-5. После установки СУБД на ВМ начнем настройку проектов IntelliJ IDEA
+5. СУБД установлены и настроены, производим настройку проектов IntelliJ IDEA, с последующей отправкой запросов.
 
 #### 5.1 MongoDB
 
-Настраиваем проект IntelliJ IDEA
+Настраиваем проект IntelliJ IDEA:
 
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_1.png)
 
@@ -52,11 +52,11 @@
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_2.png)
 
-Настроим подключение к базе данных MongoDB в IntelliJ IDEA
+Настроим подключение к базе данных MongoDB в IntelliJ IDEA:
 
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Mongo_3.png)
 
-Запустим Java запрос на генерацию 10млн строк и вставку в БД построчно.
+Запустим Java запрос на генерацию 10млн строк и вставку в БД построчно:
 ```
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
@@ -269,9 +269,9 @@ public class Main {
 
 Подключаем базу данных Redis в IntelliJ IDEA:
 
-![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_DB.png)
+![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_BD.png)
 
-Отправляем созданный Java запрос на генерацию 10млн строк и вставку в БД построчно.
+Отправляем созданный Java запрос на генерацию 10млн строк и вставку в БД построчно:
 ```
 import redis.clients.jedis.Jedis;
 import java.util.UUID;
@@ -292,7 +292,7 @@ public class Main {
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_1.png)
 
-Проверим данные в БД Redis
+Проверим данные в БД Redis:
 
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_2.png)
 
@@ -386,7 +386,13 @@ public class Main {
 }
 ```
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_5.png)
+
+Проверим остались ли записи содержащие "999":
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_6.png)
+
+Выберем записи содержащие "777":
+
 ![connect](https://github.com/dushaev7777/NoSQL1989-02-24/blob/main/Image/Project/Redis_7.png)
 
 Теперь удалим все строки где встречается значение 777:
